@@ -92,6 +92,12 @@ export default class AppNavbar extends Component<Props> {
                                 <MDBIcon fab icon="linkedin" />{this.state.isOpen ? 'Linkedin' : ''}
                             </a>
                         </MDBNavItem>
+                        <MDBNavItem>
+                            <a className="nav-link waves-effect waves-light" href="https://github.com/william-astatine"
+                                target="_blank" rel="noopener noreferrer">
+                                <MDBIcon fab icon="github" />{this.state.isOpen ? 'Github' : ''}
+                            </a>
+                        </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>
             </MDBNavbar>

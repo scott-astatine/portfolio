@@ -23,7 +23,7 @@ export const Home: React.FC<Props> = ({ name }) => {
                             <p className='intro-title mb-2'>{name} Astatine</p>
                             <p className='font-weight-light'>
                                 I am a Full-Stack Developer, a Software Developer,
-                                Python Programmer, Linux Programmer and a High school student.
+                                Python Programmer, ML & Data Science enthusiast, Linux Programmer and a High school student.
                             </p>
                         </MDBCol>
                     </MDBRow>

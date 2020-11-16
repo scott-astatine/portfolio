@@ -8,7 +8,7 @@ import PageFooter from './components/layout/footer';
 const App: React.FC = () => {
 
   const name = 'William'
-  document.title = name + " Astatine's Protfolio";
+  document.title = name + " Astatine";
 
   return (
     <React.Fragment>
