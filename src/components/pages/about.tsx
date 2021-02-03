@@ -1,6 +1,7 @@
 import { MDBCol, MDBContainer, MDBRow } from 'mdbreact'
 import React from 'react'
 
+
 export const About = () => {
     return (
         <React.Fragment>
@@ -23,31 +24,9 @@ export const About = () => {
                                     style={{ width: '100%', height: '400px' }} />
                             </div>
                         </MDBCol>
-                        <MDBCol lg='6' sm='12' className='text-center'>
+                          <MDBCol lg='6' sm='12' className='text-center'>
                             <p className='font-weight-light'>
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.<br />
-
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.<br />
-
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.<br />
-
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.
-                                Hi, I'm Ayush! and my other name is William Astatine.<br />
+                              Hello, I'm William Astatine. I'm a self-taught programmer.
                             </p>
                         </MDBCol>
                     </MDBRow>
