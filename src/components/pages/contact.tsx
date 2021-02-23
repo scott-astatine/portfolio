@@ -8,6 +8,18 @@ interface IState {
     message: string
 }
 
+const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }
+    if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
+    ) {
+        return "mobile";
+    }
+    return "desktop";
+};
+
 export class Contact extends Component<{}, IState> {
 
     constructor(props: any) {
@@ -39,51 +51,55 @@ export class Contact extends Component<{}, IState> {
         return (
             <React.Fragment>
                 <section className='content-section rpb-gradient'>
-                    <MDBContainer className='bg-white' style={{ borderRadius: '10px', padding: '40px' }}>
-                        <div className="title-container">
+                    <MDBContainer className='bg-white' style={{ borderRadius: '10px', padding: '30px' }}>
+                        <div className="title-container ">
                             <p className='section-title'>Contact</p>
                             <hr className='deep-purple' style={{ width: '130px', height: '0.2px', marginLeft: '20px', marginTop: '-30px' }} />
                         </div>
                         <MDBRow>
                             <MDBCol lg='5' sm='12' xl='6'>
                                 <MDBContainer className='rounded-container'>
-                                    <div className="head-container">
-                                        <p className="message">Send your qwery to me.</p>
+                                    <div className='justify-content-center'>
+                                        <div className="head-container" style={{
+                                            marginLeft: deviceType() === "desktop" ? '50px' : '25px'
+                                        }}>
+                                            <p className="message">Send your qwery to me.</p>
+                                        </div>
+                                        <form onSubmit={this.handleSubmit}>
+                                            <div className="grey-text">
+                                                <MDBInput label="Your name"
+                                                    icon="user"
+                                                    name='name'
+                                                    onChange={this.handleChange}
+                                                    value={this.state.name}
+                                                    group
+                                                    type="text"
+                                                    validate error="wrong"
+                                                    success="right" />
+                                                <MDBInput label="Your email"
+                                                    name='email'
+                                                    onChange={this.handleChange}
+                                                    value={this.state.email}
+                                                    icon="envelope" group type="email" validate error="wrong"
+                                                    success="right" />
+                                                <MDBInput label="Subject"
+                                                    name='subject'
+                                                    onChange={this.handleChange}
+                                                    value={this.state.subject} icon="tag" group type="text" validate error="wrong" success="right" />
+                                                <MDBInput type="textarea"
+                                                    name='message'
+                                                    onChange={this.handleChange}
+                                                    value={this.state.message}
+                                                    rows="2" label="Your message" icon="pencil-alt" />
+                                            </div>
+                                            <div className="text-center">
+                                                <MDBBtn className="round-element aqua-gradient">
+                                                    Send
+                                            <MDBIcon far icon="paper-plane" className="ml-1" />
+                                                </MDBBtn>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <form onSubmit={this.handleSubmit}>
-                                        <div className="grey-text">
-                                            <MDBInput label="Your name"
-                                                icon="user"
-                                                name='name'
-                                                onChange={this.handleChange}
-                                                value={this.state.name}
-                                                group
-                                                type="text"
-                                                validate error="wrong"
-                                                success="right" />
-                                            <MDBInput label="Your email"
-                                                name='email'
-                                                onChange={this.handleChange}
-                                                value={this.state.email}
-                                                icon="envelope" group type="email" validate error="wrong"
-                                                success="right" />
-                                            <MDBInput label="Subject"
-                                                name='subject'
-                                                onChange={this.handleChange}
-                                                value={this.state.subject} icon="tag" group type="text" validate error="wrong" success="right" />
-                                            <MDBInput type="textarea"
-                                                name='message'
-                                                onChange={this.handleChange}
-                                                value={this.state.message}
-                                                rows="2" label="Your message" icon="pencil-alt" />
-                                        </div>
-                                        <div className="text-center">
-                                            <MDBBtn className="round-element aqua-gradient">
-                                                Send
-                                        <MDBIcon far icon="paper-plane" className="ml-1" />
-                                            </MDBBtn>
-                                        </div>
-                                    </form>
                                 </MDBContainer>
                             </MDBCol>
                             <MDBCol lg='7' sm='12' xl='6'>
@@ -94,7 +110,7 @@ export class Contact extends Component<{}, IState> {
                                     </section>
                                 </section>
                                 <MDBCol lg='12' sm='12'>
-                                    <MDBContainer className='rounded-container' style={{ borderRadius: '50px !important' }}>
+                                    <MDBContainer className='contact-details'>
                                         <p>
                                             <MDBIcon className='mr-2' icon="envelope" size='lg' />
                                             WilliamAstatine@gmail.com

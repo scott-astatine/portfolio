@@ -21,9 +21,9 @@ export const Home: React.FC<Props> = ({ name }) => {
                                 width: '200px', height: '195px'
                             }} alt='William Astatine' />
                             <p className='intro-title mb-2'>{name} Astatine</p>
-                            <p className='font-weight-light'>
+                            <p className='font-weight-light intro-description'>
                                 I am a Full-Stack Developer, a Software Developer,
-                                Python Programmer, ML & Data Science enthusiast, Linux Programmer and a High school student.
+                                Python Programmer, A.I & Machine Learning enthusiast and Linux Programmer.
                             </p>
                         </MDBCol>
                     </MDBRow>
