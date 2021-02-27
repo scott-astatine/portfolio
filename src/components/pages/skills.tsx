@@ -43,7 +43,7 @@ export const Skills = () => {
                             <MDBContainer className='progress-bar-container'>
                                 <MDBRow>
                                     <MDBCol lg='2'>
-                                        <img src={js} alt='JavaScript' style={{width:'100px', marginLeft: '-10px'}} />
+                                        <img src={js} alt='JavaScript' style={{width:'100px', marginLeft: '-5px'}} />
                                     </MDBCol>
                                     <MDBCol lg='10'>
                                         <MDBProgress value={80} className="my-2 mt-4" />
