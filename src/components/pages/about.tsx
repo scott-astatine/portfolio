@@ -25,14 +25,14 @@ export const About = () => {
                         </MDBCol>
                           <MDBCol lg='6' sm='12' className='text-center'>
                             <p className='font-weight-light'>
-                              Hello, I'm William Astatine. I'm a self-taught programmer.
-                              I started programming when I was 12, at first I had no idea what I was doing
-                              but I always wanted to build a program that can learn & talk. But I started with 
-                              Web Development, learnt Python, JavaScript, Html/Css. After that I started learning 
-                              new programming languages C++/C, Java, GoLang, Kotlin, TypeScript, Rust. After finding out about A.I
-                              I needed the basic maths for ML but that maths syllabus was too tough for me and I couldn't find
-                              any resources where I could even try. Anyway I'm always ready to learn new programming languages and my Legal 
-                              Name is Ayush Kumar.
+                              Hello, I'm William Astatine & my legal name is Ayush. 
+                              I'm a self-taught programmer. I've been programming since I was 12. I can program in couple of 
+                              languages like Python, C/C++, JavaScript, TypeScript, Rust. Linux is my favourite OS, 
+                              more specifically I use KUbuntu. And I am a full-stack web developer, I use Python's framework Django
+                              and JavaScript library ReactJs as my default tools for web development.
+                              But, I could use NodeJs for backend if required.
+                              I'm always ready to learn new skills. Right now I'm fifteen, if you have job that fits my skillset
+                              please contact me on my email or any social Direct messing service mentioned in the navbar!
                             </p>
                         </MDBCol>
                     </MDBRow>

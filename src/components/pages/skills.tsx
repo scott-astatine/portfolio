@@ -124,7 +124,7 @@ export const Skills = () => {
                                              alt='Linux' />
                                     </MDBCol>
                                     <MDBCol lg='10'>
-                                        <MDBProgress value={50} className="my-2 mt-4" />
+                                        <MDBProgress value={70} className="my-2 mt-4" />
                                         <p className='lang-name'>Linux</p>
                                     </MDBCol>
                                 </MDBRow>
