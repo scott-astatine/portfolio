@@ -119,10 +119,6 @@ export class Contact extends Component<{}, IState> {
                                             <MDBIcon className='mr-2' icon="phone" size='lg' />
                                         +91 8434862003
                                         </p>
-                                        <p>
-                                            <MDBIcon className='mr-2' icon="home" size='lg' />
-                                        Bravery Hills, Street 34, Park Avenue
-                                        </p>
                                     </MDBContainer>
                                 </MDBCol>
                             </MDBCol>
