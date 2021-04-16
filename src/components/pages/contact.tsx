@@ -63,7 +63,7 @@ export class Contact extends Component<{}, IState> {
                                         <div className="head-container" style={{
                                             marginLeft: deviceType() === "desktop" ? '50px' : '25px'
                                         }}>
-                                            <p className="message">Send your qwery to me.</p>
+                                            <p className="message">Send your query to me.</p>
                                         </div>
                                         <form onSubmit={this.handleSubmit}>
                                             <div className="grey-text">

@@ -40,7 +40,7 @@ export default class AppNavbar extends Component<Props> {
             >
                 <MDBNavbarBrand>
                     <NavLink className='navbar-brand' to="/">
-                        {this.props.name}
+                        Ayush Kumar
                     </NavLink>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={this.toggleCollapse} />

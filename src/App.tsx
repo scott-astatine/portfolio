@@ -18,8 +18,8 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
 
-  const name = 'William'
-  document.title = name + " Astatine";
+  const name = 'Ayush'
+  document.title = name + " Kumar";
 
   return (
     <React.Fragment>
