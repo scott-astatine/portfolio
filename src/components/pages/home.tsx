@@ -20,10 +20,11 @@ export const Home: React.FC<Props> = ({ name }) => {
                                 borderRadius: '100px',
                                 width: '200px', height: '195px'
                             }} alt='William Astatine' />
-                            <p className='intro-title mb-2'>{name} Kumar</p>
+                            <p className='intro-title mb-2'>{name} Astatine</p>
                             <p className='font-weight-light intro-description'>
                                 I am a Full-Stack Developer, a Software Developer,
-                                Python Programmer, A.I & Machine Learning enthusiast and Linux Programmer.
+                                Python Programmer, A.I & Machine Learning enthusiast, 
+                                Rustacean, Biotech enthusiast.
                             </p>
                         </MDBCol>
                     </MDBRow>
