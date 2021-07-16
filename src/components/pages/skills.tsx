@@ -58,7 +58,7 @@ export const Skills = () => {
                                              alt='Rust' />
                                     </MDBCol>
                                     <MDBCol lg='10'>
-                                        <MDBProgress value={50} className="my-2 mt-4" />
+                                        <MDBProgress value={80} className="my-2 mt-4" />
                                         <p className='lang-name'>Rust</p>
                                     </MDBCol>
                                 </MDBRow>
