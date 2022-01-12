@@ -165,7 +165,7 @@ export class Contact extends Component<{}, IState> {
                   <MDBContainer className="contact-details">
                     <a href="mailto:williamastatine@gmail.com">
                       <MDBIcon className="mr-2" icon="envelope" size="lg" />
-                      WilliamAstatine@gmail.com
+                      ScottAstatine@gmail.com
                     </a>
                     <p>
                       <MDBIcon className="mr-2" icon="phone" size="lg" />
