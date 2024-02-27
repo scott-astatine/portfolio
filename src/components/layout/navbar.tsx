@@ -81,19 +81,19 @@ export default class AppNavbar extends Component<Props> {
               </a>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="nav-link waves-effect waves-light" href="https://www.instagram.com/williamastatine"
+              <a className="nav-link waves-effect waves-light" href="https://www.instagram.com/scottastatine"
                 target="_blank" rel="noopener noreferrer">
                 <MDBIcon fab icon="instagram" />{this.state.isOpen ? 'Instagram' : ''}
               </a>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="nav-link waves-effect waves-light" href="https://www.linkedin.com/in/williamastatine"
+              <a className="nav-link waves-effect waves-light" href="https://www.linkedin.com/in/scott-astatine"
                 target="_blank" rel="noopener noreferrer">
                 <MDBIcon fab icon="linkedin" />{this.state.isOpen ? 'Linkedin' : ''}
               </a>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="nav-link waves-effect waves-light" href="https://github.com/william-astatine"
+              <a className="nav-link waves-effect waves-light" href="https://github.com/scott-astatine"
                 target="_blank" rel="noopener noreferrer">
                 <MDBIcon fab icon="github" />{this.state.isOpen ? 'Github' : ''}
               </a>
