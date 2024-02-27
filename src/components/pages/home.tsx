@@ -11,7 +11,7 @@ export const Home: React.FC<Props> = ({ name }) => {
     return (
         <React.Fragment>
             <section className='home-section'>
-                <MDBContainer className="d-flex justify-content-center text-center" style={{
+                <MDBContainer className="d-flex min-h-screen justify-content-center text-center" style={{
                     borderRadius: '20px',
                 }}>
                     <MDBRow>
