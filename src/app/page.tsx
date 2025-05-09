@@ -20,17 +20,18 @@ export default function Home() {
             delay: 0.15,
           }}
           className="flex flex-col items-center xl:w-1/3 w-full h-fit 
-          min-h-20 px-20 py-20 mx-80 xl:mx-0 rounded-3xl shadow-6xl border select-none
+          min-h-20 px-16 py-16 mx-80 xl:mx-0 rounded-3xl shadow-6xl border select-none
           border-white/40 bg-black/35"
         >
-          <Image
-            className="rounded-full shadow-xl"
-            src="/myAvatar.jpg"
-            alt="MyAvatar"
-            width={310}
-            height={310}
-            priority
-          />
+          <div className="w-60 h-60 rounded-full overflow-hidden shadow-xl">
+            <Image
+              src="/myAvatar.jpg"
+              alt="MyAvatar"
+              width={260}
+              height={260}
+              className="object-cover"
+            />
+          </div>
           <p className={`text-6xl text-center my-4 ${cormorantFont.className}`}>
             Ayush Kumar
           </p>

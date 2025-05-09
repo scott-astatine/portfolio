@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import TransitionProvider from "./components/transitionProvider";
 import { sansFont } from "./components/utilities";
 import { Navbar } from "./Navbar";
 
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     url: "https://www.github.com/scott-astatine",
     name: "Scott Astatine",
   },
-  icons: "/myAvatar.jpg",
+  icons: "favicon.ico",
 };
 
 export default function RootLayout({
