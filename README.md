@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Scott's Portfolio Website
 
-## Getting Started
+Welcome to the repository for my personal portfolio website! This project showcases my skills, projects, and experience as a web developer. Built with [Next.js](https://nextjs.org/), it is designed to be fast, responsive, and visually appealing.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Modern Design**: A clean and professional layout to highlight my work.
+- **Responsive**: Optimized for viewing on all devices, from desktops to mobile phones.
+- **Dynamic Content**: Projects and skills are dynamically rendered for easy updates.
+- **SEO Optimized**: Built with best practices to improve visibility on search engines.
+- **Fast Performance**: Leveraging Next.js features for optimal speed and user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **About Me**: Learn more about my background and expertise.
+- **Projects**: A showcase of my best work, including links to live demos and source code.
+- **Skills**: A list of technologies and tools I am proficient in.
+- **Contact**: A form to get in touch with me directly.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- [Next.js](https://nextjs.org/) for the frontend framework.
+- [Tailwind CSS](https://tailwindcss.com/) for styling.
+- [Vercel](https://vercel.com/) for deployment and hosting.
 
-To learn more about Next.js, take a look at the following resources:
+## Live Portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can view the live version of my portfolio at [https://scott-astatine.onrender.com](https://scott-astatine.onrender.com).
