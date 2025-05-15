@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import { cormorantFont } from "./components/utilities";
 
 export default function Home() {
-
   return (
     <div
       className={`flex min-h-screen font-serif bg-gradient-to-b from-purple-900/20
-    from-10% via-red-700/40 via-30% to-gray-900/10 to-90%`}
+    via-red-700/40 to-gray-900/10`}
     >
-      <div className="flex xl:flex-row flex-col justify-between items-center w-full mt-32 xl:px-40 px-6">
+      <div className="flex flex-col xl:flex-row justify-center items-center w-full mt-40 xl:px-40 px-6 pb-40 gap-10">
         <motion.div
           initial={{ opacity: 0, y: -800, x: -600 }}
           animate={{ opacity: 1, y: 0, x: 0 }}
@@ -19,27 +18,25 @@ export default function Home() {
             duration: 0.7,
             delay: 0.15,
           }}
-          className="flex flex-col items-center xl:w-1/3 w-full h-fit 
-          min-h-20 px-16 py-16 mx-80 xl:mx-0 rounded-3xl shadow-6xl border select-none
-          border-white/40 bg-black/35"
+          className="flex flex-col items-center xl:w-1/3 w-full h-fit px-12 py-12 rounded-3xl shadow-2xl border border-white/30 bg-black/40"
         >
-          <div className="w-60 h-60 rounded-full overflow-hidden shadow-xl">
+          <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
             <Image
               src="/myAvatar.jpg"
               alt="MyAvatar"
-              width={260}
-              height={260}
+              width={192}
+              height={192}
               className="object-cover"
             />
           </div>
-          <p className={`text-6xl text-center my-4 ${cormorantFont.className}`}>
+          <p className={`text-5xl text-center my-4 ${cormorantFont.className}`}>
             Ayush Kumar
           </p>
-          <p className={`text-center m-3 ${cormorantFont.className}`}>
+          <p className={`text-center text-lg ${cormorantFont.className}`}>
             aka Scott Astatine
           </p>
-          <div className="justify-center text-center border border-white/10 rounded-3xl py-3 px-2 antialiased bg-black-400/10">
-            <p className="font-bold antialiased">
+          <div className="mt-4 text-center border border-white/20 rounded-2xl py-2 px-4 bg-black/20">
+            <p className="font-semibold">
               Programmer, Biotech & A.I Enthusiast
             </p>
           </div>
@@ -51,14 +48,28 @@ export default function Home() {
             duration: 0.6,
             ease: "easeInOut",
           }}
-          className="xl:w-1/2 p-4 m-3 sm:mt-8 sm:mb-16 flex flex-col self-center text-justify rounded-2xl shadow-lg bg-black/5 border border-white/5"
+          className="xl:w-1/2 p-6 flex flex-col text-center rounded-2xl shadow-lg bg-black/10 border border-white/10"
         >
-          <p className="text-4xl md:text-6xl my-6">Hi, there...</p>
-          <p className="lg:text-2xl text-xl font-sans self-end">
-            Welcome to my corner of the Internet
-          </p>
-          <p className="text-white text-wrap">
-            Hello there, I'm <i>Ayush</i>.
+          <div className="flex flex-col items-center">
+            <p className="text-4xl md:text-5xl my-4 text-left w-full">
+              Hello, there...
+            </p>
+            <p className="text-base mt-4 font-mono text-gray-300 max-w-xl mx-auto">
+              I'm <i>Ayush</i>, a self-taught ML practitioner &
+              aspiring polymath building cool stuff at the intersection of code,
+              data, and life itself. Whether it's building predictive models,
+              analyzing weird patterns in datasets, or trying to make AI a
+              little less dumb—I'm all in.
+            </p>
+            <p className="text-base mt-3 font-mono text-gray-400 max-w-xl mx-auto italic">
+              Currently working with Python, NumPy, Pandas, Scikit-learn,
+              Matplotlib, Seaborn—and leveling up with TensorFlow and PyTorch. I
+              do all this on Arch Linux because I like my OS like I like my
+              models: minimal, efficient, and under my control.
+            </p>
+          </div>
+          <p className="lg:text-lg text-sm font-light pt-4 text-right w-full">
+            <i>Welcome to my corner of the Internet...</i>
           </p>
         </motion.div>
       </div>

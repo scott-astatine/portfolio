@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       <div className="max-w-3xl w-[85%] ">
-        <div className="text-white text-2xl text-center pt-40 pb-50 mx-auto">
+        <div className="text-white text-2xl text-center pt-40 pb-40 mx-auto">
           <p>
             Hi, I’m Scott—self-taught machine learning enthusiast, part-time sci-fi
             philosopher, and full-time bug whisperer. If you've ever screamed at

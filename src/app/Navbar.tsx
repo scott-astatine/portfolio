@@ -100,7 +100,9 @@ export function Navbar() {
           >
             Ayush
           </Link>
-          <div className={`hidden top-0 left-8 lg:flex p-2 xl:items-center gap-4 text-xl text-slate-50 ${monoFont}`}>
+          <div
+            className={`hidden top-0 left-8 lg:flex p-2 xl:items-center gap-4 text-xl text-slate-50 ${monoFont}`}
+          >
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -153,7 +155,9 @@ export function Navbar() {
                 <motion.div variants={navLinkVarients} key={link.href}>
                   <Link
                     href={link.href}
-                    className={`font-medium hover:underline`}
+                    className={`font-medium hover:underline ${
+                      active(link.href) && "underline font-extrabold text-white"
+                    }`}
                     onClick={() => setMenuOpen(!menuIsOpened)}
                   >
                     {link.label}

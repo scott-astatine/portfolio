@@ -8,22 +8,22 @@ const socialLinks = [
   {
     name: "Github",
     url: "https://github.com/scott-astatine",
-    icon: <FaGithub scale={1.2}/>,
+    icon: <FaGithub scale={1.2} />,
   },
   {
     name: "Linkedin",
     url: "https://linkedin.com/in/scott-astatine/",
-    icon: <FaLinkedin scale={1.2}/>,
+    icon: <FaLinkedin scale={1.2} />,
   },
   {
     name: "Instagram",
     url: "https://instagram.com/scottastatine",
-    icon: <FaInstagram scale={1.2}/>,
+    icon: <FaInstagram scale={1.2} />,
   },
   {
     name: "X(Twitter)",
     url: "https://twitter.com/scottastatine",
-    icon: <FaX scale={1.2}/>,
+    icon: <FaX scale={1.2} />,
   },
 ];
 
@@ -33,18 +33,17 @@ export default function Social() {
       <div className={`m-10 text-3xl ${monoFont}`}>
         <p>My Socials</p>
       </div>
-      <div className="flex xl:flex-row flex-wrap justify-between items-center 
-      h-80 p-10 xl:w-[60%] w-screen xl:mx-4 mx-20 border border-white/20 shadow-2xl rounded-[2rem] ">
+      <div className="flex flex-col justify-center items-center gap-6 p-10 xl:w-[40%] w-[90%] border border-white/20 shadow-2xl rounded-[2rem] bg-black/50">
         {socialLinks.map((link) => (
           <Link key={link.url} href={link.url} target="_blank">
             <div
-              className={`flex flex-row justify-between items-center border 
-            border-white/50 ${monoFont}  text-2xl text-center px-3 py-4 mx-4 
+              className={`flex flex-row justify-center items-center border 
+            border-white/50 ${monoFont} text-2xl text-center px-6 py-4 
             rounded-xl bg-black hover:bg-gradient-radial
-            hover:from-red-300/80 hover:to-gray-100 hover:text-black`}
+            hover:from-red-300/80 hover:to-gray-100 hover:text-black transition-all`}
             >
-              <span>{link.icon}</span>
-              <div className="px-2">{link.name}</div>
+              <span className="mr-3">{link.icon}</span>
+              <div>{link.name}</div>
             </div>
           </Link>
         ))}
