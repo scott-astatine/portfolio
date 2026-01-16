@@ -11,7 +11,7 @@ export const cormorantFont = Cormorant_Upright({
   subsets: ["latin"],
 });
 
-export const sansFont = Courier_Prime({
+export const sansFont = Alexandria({
   subsets: ["latin"],
   weight: "400",
 });

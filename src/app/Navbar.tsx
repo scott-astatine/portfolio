@@ -1,173 +1,115 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-import { cormorantFont, monoFont } from "./components/utilities";
+import { styledFont, monoFont } from "./components/utilities";
 
 export function Navbar() {
   const [menuIsOpened, setMenuOpen] = useState(false);
   const active = (path: string) => usePathname() === path;
+  
   const links = [
-    {
-      label: "About",
-      href: "/about",
-    },
-    {
-      label: "Blog",
-      href: "https://scottastatine.medium.com/",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Social",
-      href: "/social",
-    },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "https://scottastatine.medium.com/" },
+    { label: "Projects", href: "/projects" },
+    { label: "Social", href: "/social" },
   ];
 
-  const menuBtnTopVarients = {
-    closed: {
-      rotate: 0,
-    },
-    opened: {
-      rotate: 45,
-      backgroundColor: "#ffffff",
-    },
+  // Animation variants
+  const menuBtnTopVariants = {
+    closed: { rotate: 0, translateY: 0 },
+    opened: { rotate: 45, translateY: 6, backgroundColor: "#a855f7" },
   };
-  const menuBtnCenterVarients = {
-    closed: {
-      opacity: 1,
-    },
-    opened: {
-      opacity: 0,
-      backgroundColor: "#ffffff",
-    },
+  const menuBtnCenterVariants = {
+    closed: { opacity: 1 },
+    opened: { opacity: 0 },
   };
-  const menuBtnBottomVarients = {
-    closed: {
-      rotate: 0,
-    },
-    opened: {
-      rotate: -45,
-      backgroundColor: "#ffffff",
-    },
-  };
-
-  const dropDownVarients = {
-    closed: {
-      x: "100vw",
-      transition: {
-        delay: 0.2,
-      },
-    },
-    opened: {
-      x: 0,
-      transition: {
-        when: "beforeChildren",
-        staggeredChildred: 0.2,
-      },
-    },
-  };
-  const navLinkVarients = {
-    closed: {
-      x: -10,
-      opacity: 0,
-    },
-    opened: {
-      x: 0,
-      opacity: 1,
-    },
+  const menuBtnBottomVariants = {
+    closed: { rotate: 0, translateY: 0 },
+    opened: { rotate: -45, translateY: -6, backgroundColor: "#06b6d4" },
   };
 
   return (
     <>
       <motion.div
-        initial={{ y: -200, x: -200, opacity: 0 }}
-        animate={{ y: 0, x: 0, opacity: 1 }}
-        transition={{ duration: 0.3, bounce: 8 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4"
       >
-        {/* Navigation links and Title */}
-        <div
-          className="fixed top-0 h-20 left-0 right-0 flex lg:justify-between justify-center items-center xl:mx-32 mx-2 my-6 lg:px-20 px-8 py-4 
-        bg-black/50 backdrop-blur-lg rounded-full border light:border-black/40 dark:border-white/40 shadow-md select-none"
-        >
-          <Link
-            href="/"
-            className={`${cormorantFont.className} font-title font-bold text-5xl`}
-          >
-            Ayush
+        <div className="glass-panel rounded-full px-8 py-4 flex items-center justify-between gap-12 max-w-5xl w-full mx-auto">
+          
+          <Link href="/" className={`${styledFont.className} text-2xl font-bold tracking-tighter hover:text-neon-purple transition-colors duration-300`}>
+            AYUSH
           </Link>
-          <div
-            className={`hidden top-0 left-8 lg:flex p-2 xl:items-center gap-4 text-xl text-slate-50 ${monoFont}`}
-          >
+
+          {/* Desktop Nav */}
+          <div className={`hidden md:flex items-center gap-8 ${monoFont.className} text-sm`}>
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex-row text-center border border-transparent hover:border-white/80
-                p-2 underline-offset-6 
-              ${
-                active(link.href) && "underline font-extrabold text-white"
-              } hover:rounded-md hover:underline`}
+                className={`relative px-2 py-1 transition-colors duration-300 ${
+                  active(link.href) ? "text-neon-cyan" : "text-gray-400 hover:text-white"
+                }`}
               >
+                {active(link.href) && (
+                  <motion.span
+                    layoutId="navbar-active"
+                    className="absolute inset-0 -z-10 bg-white/5 rounded-md border border-white/10"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
                 {link.label}
               </Link>
             ))}
           </div>
-        </div>
-        {/* Menu Button */}
-        <div className="fixed lg:hidden flex flex-row-reverse p-12 z-40">
+
+          {/* Mobile Menu Button */}
           <button
-            className="xl:hidden w-10 h-8 flex flex-col justify-between"
+            className="md:hidden w-8 h-8 flex flex-col justify-between items-center py-2"
             onClick={() => setMenuOpen(!menuIsOpened)}
           >
-            <motion.div
-              variants={menuBtnTopVarients}
-              animate={menuIsOpened ? "opened" : "closed"}
-              className="w-10 h-1 bg-white rounded origin-left"
-            ></motion.div>
-            <motion.div
-              variants={menuBtnCenterVarients}
-              animate={menuIsOpened ? "opened" : "closed"}
-              className="w-10 h-1 bg-white rounded"
-            ></motion.div>
-            <motion.div
-              variants={menuBtnBottomVarients}
-              animate={menuIsOpened ? "opened" : "closed"}
-              className="w-10 h-1 bg-white rounded origin-left"
-            ></motion.div>
+            <motion.div variants={menuBtnTopVariants} animate={menuIsOpened ? "opened" : "closed"} className="w-6 h-0.5 bg-white origin-center" />
+            <motion.div variants={menuBtnCenterVariants} animate={menuIsOpened ? "opened" : "closed"} className="w-6 h-0.5 bg-white" />
+            <motion.div variants={menuBtnBottomVariants} animate={menuIsOpened ? "opened" : "closed"} className="w-6 h-0.5 bg-white origin-center" />
           </button>
+
         </div>
-        {/* Colapsable menu */}
+      </motion.div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
         {menuIsOpened && (
           <motion.div
-            variants={dropDownVarients}
-            initial="closed"
-            animate="opened"
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="flex fixed"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            className="fixed inset-0 z-40 bg-black/90 flex flex-col justify-center items-center gap-8"
           >
-            <div className="absolute flex flex-col justify-center items-center text-4xl w-screen h-screen gap-8 bg-black">
-              {links.map((link) => (
-                <motion.div variants={navLinkVarients} key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`font-medium hover:underline ${
-                      active(link.href) && "underline font-extrabold text-white"
-                    }`}
-                    onClick={() => setMenuOpen(!menuIsOpened)}
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
+            {links.map((link, i) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + i * 0.1 }}
+              >
+                <Link
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`text-3xl ${styledFont.className} ${
+                    active(link.href) ? "text-neon-cyan" : "text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
         )}
-      </motion.div>
+      </AnimatePresence>
     </>
   );
 }
