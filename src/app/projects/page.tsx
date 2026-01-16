@@ -1,35 +1,27 @@
 import Link from "next/link";
 import { styledFont, monoFont } from "../components/utilities";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface Project {
   title: string;
   description: string;
-  link: string; // URL to the project (Github or live site)
+  link: string; 
   tags: string[];
 }
 
-// Add your projects here
 const projects: Project[] = [
-  // Example Project - Replace or add yours
   {
-    title: "Portfolio v2",
-    description: "My personal corner of the web, built with Next.js 16, Tailwind v4, and a lot of caffeine. Features a custom glassmorphism UI and a 'Gen AI' aesthetic.",
-    link: "https://github.com/scott-astatine/portfolio",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    title: "Onka",
+    description: "A P2P video chat application inspired by Omegle. Built to explore WebRTC and real-time peer-to-peer communication.",
+    link: "https://github.com/scott-astatine/Onka",
+    tags: ["WebRTC", "P2P", "JavaScript"],
   },
   {
-    title: "Arch Linux Config",
-    description: "My personal dotfiles and system configuration. Optimized for productivity, minimalism, and terminal-based workflows.",
-    link: "https://github.com/scott-astatine", // Update with actual link if available
-    tags: ["Bash", "Lua", "Linux"],
+    title: "chessdom",
+    description: "A 'dumb' chess engine written in Flutter. More of an experiment in move validation and mobile UI than a grandmaster-level threat.",
+    link: "https://github.com/scott-astatine/chessdom",
+    tags: ["Flutter", "Dart", "Chess"],
   },
-  // {
-  //   title: "Coming Soon...",
-  //   description: "I'm currently cooking up something cool with LLMs. Stay tuned.",
-  //   link: "#",
-  //   tags: ["Python", "AI"],
-  // },
 ];
 
 export default function Projects() {
